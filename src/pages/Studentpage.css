@@ -1,0 +1,72 @@
+.student-page {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: #fce7b2; /* Light yellow background */
+  }
+  
+  /* Calendar Section */
+  .calendar {
+    width: 250px;
+    background: #f4a261;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .calendar h3 {
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  
+  .day-header {
+    font-weight: bold;
+    color: white;
+  }
+  
+  .day {
+    width: 30px;
+    height: 30px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+  }
+  
+  .day.active {
+    background: #d62828;
+    color: white;
+  }
+  
+  /* Student Actions */
+  .student-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    flex-grow: 1;
+  }
+  
+  .action-btn {
+    background: #e76f51;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .action-btn:hover {
+    background: #d62828;
+  }
