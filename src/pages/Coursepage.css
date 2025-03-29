@@ -1,0 +1,38 @@
+
+.course-page {
+    position: relative;
+    left: 351px; 
+    right: 0;
+    top: 0;
+    display: flex;
+    gap: 10px;
+    padding: 215px;
+    background: #fce7b2; /* Light yellow background */
+  }
+
+  
+  /* Student Actions */
+  .course-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    flex-grow: 1;
+  }
+  
+  .action-btncourse {
+    background: #e76f51;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .action-btncourse:hover {
+    background: #d62828;
+  }

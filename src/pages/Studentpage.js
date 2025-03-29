@@ -1,44 +1,43 @@
 import React from 'react';
 import './Studentpage.css';  // Correct path to your CSS file
 import Navbar from '../components/Navbar';
-import Login from '../components/Login';
-
+import { useNavigate, Link } from "react-router-dom";
+import Logout from '../components/Logout';
+import Slidebar from '../components/Slidebar';
+import Calendar from '../components/Calender';
 
 export default function Studentpage() {
-  return (
-  <div><Navbar/>
-  <div><Login/>
-    <div className="student-page">
-      
-    
-      {/* Calendar Section */}
-      <div className="calendar">
-        <h3>July 2021</h3>
-        <div className="calendar-grid">
-          <div className="day-header">Mo</div>
-          <div className="day-header">Tu</div>
-          <div className="day-header">We</div>
-          <div className="day-header">Th</div>
-          <div className="day-header">Fr</div>
-          <div className="day-header">Sa</div>
-          <div className="day-header">Su</div>
-          {/* Example Days (you can generate dynamically) */}
-          <div className="day"></div> <div className="day"></div>
-          <div className="day"></div> <div className="day"></div>
-          <div className="day"></div> <div className="day"></div>
-          <div className="day active">6</div> {/* Active Day */}
-        </div>
-      </div>
+  const navigate = useNavigate();
+  const handleClick = () => navigate('/pages/Addstudent');
+  const handleClick1 = () => navigate('/pages/Liststudent');
 
-      {/* Student Actions */}
-      <div className="student-actions">
-        <button className="action-btn">Add Student</button>
-        <button className="action-btn">Remove Student</button>
-        <button className="action-btn">List Students</button>
-        <button className="action-btn">Assign Courses</button>
+
+  // const handleClick1= () => navigate('/pages/ListStudent');
+  // const handleClick2= () => navigate('/pages/Assigncourses');
+  return (
+  <div className='bg'><Navbar/>
+  {/* <div><Slidebar/></div> */}
+
+
+    <div className="container2">
+      <div className="left-section">
+      <Slidebar/>
+      </div>
+      <div className="right-section">
+      <div className="student-page">
+
+{/* Student Actions */}
+<div className="student-actions">
+{/* <button className="adminbutton" onClick={handleClick}>Admin</button> */}
+  <button className="action-btn" onClick={handleClick}>Add Student</button>
+  <button className="action-btn" onClick={handleClick1}>List Students</button>
+  
+  
+</div>
+</div>
       </div>
     </div>
     </div>
-    </div>
+
   );
 }

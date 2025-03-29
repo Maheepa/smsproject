@@ -1,0 +1,44 @@
+.admin-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .user-info, .user-list {
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .user-table th, .user-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .user-table th {
+    background: #007bff;
+    color: white;
+  }
+  
+  .highlight {
+    background-color: lightgreen; /* Highlight the currently logged-in admin */
+  }
+  
+  td:last-child {
+    font-weight: bold;
+    color: red;
+  }
+  
+  td:last-child:contains("Logged In") {
+    color: green;
+  }
+  
