@@ -11,10 +11,10 @@ export default function Studentpage() {
   const handleClick = () => navigate('/pages/Addstudent');
   const handleClick1 = () => navigate('/pages/Liststudent');
   const handleClick2= () => navigate('/pages/Viewstd');
-  // const handleClick2= () => navigate('/pages/Assigncourses');
+  
   return (
   <div className='bgs'><Navbar/>
-  {/* <div><Slidebar/></div> */}
+  
 
 
     <div className="container2">
@@ -26,7 +26,7 @@ export default function Studentpage() {
 
 {/* Student Actions */}
 <div className="student-actions">
-{/* <button className="adminbutton" onClick={handleClick}>Admin</button> */}
+
   <button className="action-btn" onClick={handleClick}>Add Student</button>
   <button className="action-btn" onClick={handleClick1}>List Students</button>
   <button className="action-btn" onClick={handleClick2}>View Students</button>
