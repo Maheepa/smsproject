@@ -13,6 +13,7 @@ import Admin from './pages/Admin';
 import AssignCourses from './pages/Assigncourses';
 import Slidebar from "./components/Slidebar";
 import Coursepage from './pages/Coursepage';
+import Viewstd from './pages/Viewstd';
 
 
 
@@ -33,6 +34,7 @@ function App() {
        <Route path="/pages/Admin" element={<Admin />} />
        <Route path="/pages/Assigncourses" element={<AssignCourses />} />
        <Route path="/pages/coursepage" element={<Coursepage />} />
+       <Route path="/pages/Viewstd" element={<Viewstd />}/>
 
       </Routes>
     </Router>

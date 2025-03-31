@@ -1,6 +1,8 @@
 import React, { useState,useEffect } from "react";
 import { getDatabase, ref, update,get,remove,push } from "firebase/database";
 import { db, auth } from "../firebase"; 
+import Navbar from "../components/Navbar";
+import Slidebar from "../components/Slidebar";
 
 const AddCourse = () => {
   const [courseName, setCourseName] = useState("");
@@ -90,62 +92,148 @@ const AddCourse = () => {
     });
   };
 
-  return (
-    <div>
-      <h2>Add a New Course</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Course Name:</label>
-          <input
-            type="text"
-            value={courseName}
-            onChange={(e) => setCourseName(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label>Course Code:</label>
-          <input
-            type="text"
-            value={courseCode}
-            onChange={(e) => setCourseCode(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label>Year:</label>
-          <select
-            value={year}
-            onChange={(e) => setYear(e.target.value)}
-            required
-          >
-            {years.map((yearOption) => (
-              <option key={yearOption.year} value={yearOption.year}>
-                Year {yearOption.year}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div>
-          <label>Semester:</label>
-          <select
-            value={semester}
-            onChange={(e) => setSemester(e.target.value)}
-            required
-          >
-            {years
-              .find((yearOption) => yearOption.year === parseInt(year))
-              .semesters.map((sem, index) => (
-                <option key={index} value={index + 1}>
-                  {sem}
-                </option>
-              ))}
-          </select>
-        </div>
-        <button type="submit">Add Course</button>
-      </form>
-    </div>
-  );
-};
+//   return (
+//     <div className="bg-addstudent"><Navbar/>
+//     <div className="container-addst">
+//     <div className="left-section-addst"><Slidebar/></div>
+//     <div className="right-section-addst">
+//     <div className="Addstd-page">
+//       <h2 className="heading-addst">Add New Course</h2>
+//       <form className="form-addst"onSubmit={handleSubmit}>
+//         <div className="row-addst"> 
+//           <label>Course Name:</label>
+//           <input 
+//             type="text"
+//             value={courseName}
+//             onChange={(e) => setCourseName(e.target.value)}
+//             required
+//           />
+//         </div>
+//         <div>
+//           <label>Course Code:</label>
+//           <input 
+//             type="text"
+//             value={courseCode}
+//             onChange={(e) => setCourseCode(e.target.value)}
+//             required
+//           />
+//         </div>
+//         <div>
+//           <label>Year:</label>
+//           <select
+//             value={year}
+//             onChange={(e) => setYear(e.target.value)}
+//             required
+//           >
+//             {years.map((yearOption) => (
+//               <option key={yearOption.year} value={yearOption.year}>
+//                 Year {yearOption.year}
+//               </option>
+//             ))}
+//           </select>
+//         </div>
+//         <div>
+//           <label>Semester:</label>
+//           <select
+//             value={semester}
+//             onChange={(e) => setSemester(e.target.value)}
+//             required
+//           >
+//             {years
+//               .find((yearOption) => yearOption.year === parseInt(year))
+//               .semesters.map((sem, index) => (
+//                 <option key={index} value={index + 1}>
+//                   {sem}
+//                 </option>
+//               ))}
+//           </select>
+//         </div>
+//         <button type="submit">Add Course</button>
+//       </form>
+//       </div>
+//       </div>
+//       </div>
+//     </div>
+//   );
+// };
 
+// export default AddCourse;
+return (
+  <div className="bg-addstudent">
+    <Navbar />
+    <div className="container-addst">
+      <div className="left-section-addst">
+        <Slidebar />
+      </div>
+      <div className="right-section-addst">
+        <div className="Addstd-page">
+          <h2 className="heading-addst">Add New Course</h2>
+          <form className="form-addst" onSubmit={handleSubmit}>
+            
+            <div className="row-addst">
+              <div className="inputGroup-addst">
+                <label>Course Name</label>
+                <input 
+                  type="text" 
+                  className="input-addst"
+                  value={courseName} 
+                  onChange={(e) => setCourseName(e.target.value)} 
+                  required 
+                />
+              </div>
+              <div className="inputGroup-addst">
+                <label>Course Code</label>
+                <input 
+                  type="text" 
+                  className="input-addst"
+                  value={courseCode} 
+                  onChange={(e) => setCourseCode(e.target.value)} 
+                  required 
+                />
+              </div>
+            </div>
+            
+            <div className="row-addst">
+              <div className="inputGroup-addst">
+                <label>Year</label>
+                <select
+                  className="input-addst"
+                  value={year}
+                  onChange={(e) => setYear(e.target.value)}
+                  required
+                >
+                  {years.map((yearOption) => (
+                    <option key={yearOption.year} value={yearOption.year}>
+                      Year {yearOption.year}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="inputGroup-addst">
+                <label>Semester</label>
+                <select
+                  className="input-addst"
+                  value={semester}
+                  onChange={(e) => setSemester(e.target.value)}
+                  required
+                >
+                  {years
+                    .find((yearOption) => yearOption.year === parseInt(year))
+                    .semesters.map((sem, index) => (
+                      <option key={index} value={index + 1}>
+                        {sem}
+                      </option>
+                    ))}
+                </select>
+              </div>
+            </div>
+            
+            <button type="submit" className="submitBtnadst">Add Course</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+};
 export default AddCourse;

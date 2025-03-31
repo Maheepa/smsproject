@@ -3,9 +3,14 @@ import { ref, onValue } from "firebase/database";
 import { db } from "../firebase";
 import Navbar from "../components/Navbar";
 import "./Log.css";
+import Slidebar from "../components/Slidebar";
+import { useNavigate } from "react-router-dom";
+
 
 export default function LogsPage() {
   const [logs, setLogs] = useState([]);
+  const navigate = useNavigate();
+    const handleClick = () => navigate('/pages/Viewstd');
 
   useEffect(() => {
     const logsRef = ref(db, "logs");
@@ -24,11 +29,14 @@ export default function LogsPage() {
   }, []);
 
   return (
-    <div>
+    <div className="bg-log">
       <Navbar />
-      
-      <div className="log-container">
-        <h2>Recent Logs</h2>
+      <div className="container-log">
+      <div className="left-section-log"><Slidebar/></div>
+      <div className="right-section-log">
+      <h2 className="heading-log">Logs</h2>
+      <div className="log-page">
+        <div className="content-log">
         <table className="log-table" border={0}>
           <thead>
             <tr>
@@ -53,7 +61,12 @@ export default function LogsPage() {
             )}
           </tbody>
         </table>
+        </div>
+      </div>
+      </div>
       </div>
     </div>
   );
 }
+
+

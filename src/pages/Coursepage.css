@@ -1,32 +1,31 @@
-
-.course-page {
+  .course-page {
     position: relative;
-    left: 351px; 
-    right: 0;
-    top: 0;
     display: flex;
     gap: 10px;
-    padding: 215px;
-    background: #fce7b2; /* Light yellow background */
+    height: 81vh;
+    background: #423d31a6; /* Light yellow background */
+    background-blend-mode: darken;
   }
-
   
   /* Student Actions */
   .course-actions {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 50px;
     flex-grow: 1;
+    margin-top: 200px;
   }
   
   .action-btncourse {
+    font-style: normal;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background: #e76f51;
     color: white;
     border: none;
     padding: 12px 20px;
     border-radius: 25px;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
     transition: 0.3s ease;
     width: 200px;
@@ -35,4 +34,20 @@
   
   .action-btncourse:hover {
     background: #d62828;
+  }
+
+  .bgc{
+    background: url('../images/img1.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .left-section-c{
+    width: 400px;
+  }
+
+  .right-section-c{
+    width: 150%;
+  }
+  .container3 {
+    display: flex;
   }

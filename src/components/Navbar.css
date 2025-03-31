@@ -10,31 +10,37 @@
     margin-left: 0;
     justify-content: space-between;
     padding: 15px 50px;
-    background: radial-gradient(circle, #ffffff, #f0d4b2);
+    background: radial-gradient(circle, #ffffffbb, #f0d4b2);
     border-bottom: 0px solid rgb(255, 162, 0);
   }
   
   .logo {
+    font-style:oblique;
     display: flex;
     align-items: center;
-    font-size: 50px;
-    font-weight: bold;
+    font-size: 55px;
+    font-weight: 1000;
+    color: rgb(0, 0, 0);
+    z-index: 1;
+    text-shadow: 1px 1px 3px rgba(236, 137, 25, 0.796);
   }
   
   .logo img {
-    width: 90px;
-    height: 90px;
-    margin-right: 1px;
+    width: 105px;
+    height: 95px;
+    margin-right: 2px;
   }
   
   .nav-links {
+    font-style: normal;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     list-style: none;
     display: flex;
-    gap: 70px;
+    gap: 80px;
   }
   
   .nav-links li {
-    font-size: 18px;
+    font-size: 20px;
     position: relative;
   }
   

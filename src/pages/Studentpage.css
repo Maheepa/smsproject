@@ -20,12 +20,14 @@
   }
   
   .action-btn {
+    font-style: normal;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background: #e76f51;
     color: white;
     border: none;
     padding: 12px 20px;
     border-radius: 25px;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
     transition: 0.3s ease;
     width: 200px;
@@ -35,24 +37,6 @@
   .action-btn:hover {
     background: #d62828;
   }
-
-
-  .stuTblAction{
-    background-color: #fce7b2;;
-  }
-
-  .stuTblCal{
-    background-color:#FF6347; /* Radial gradient from orange to tomato */
-  }
-  .stuTbl{
-    border-color: #fce7b2;
-  }
-
-  .bg{
-    background-color: #fce7b2;
-  }
-
-
 
   .container2 {
     display: flex;
@@ -66,7 +50,8 @@
     width: 150%;
   }
   
-  .bg{
+  .bgs{
     background: url('../images/img1.jpg') no-repeat center center fixed;
     background-size: cover;
+    background-color: #fce7b2;
   }

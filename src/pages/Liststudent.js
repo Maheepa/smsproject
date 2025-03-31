@@ -1,116 +1,12 @@
-// import React, { useState, useEffect } from "react";
-// import { getDatabase, ref, onValue, remove } from "firebase/database";
-// import Navbar from "../components/Navbar";
-// import Logout from "../components/Logout"; // Ensure you use Logout instead of Login
-// import "./Studentpage.css"; // Ensure you have this CSS file for styling
-// import { db } from "../firebase"; // Import Firebase configuration
-
-// export default function StudentPage() {
-//   const [students, setStudents] = useState([]);
-
-//   // Fetch student data from Firebase
-//   useEffect(() => {
-//     const studentsRef = ref(db, "students");
-    
-//     onValue(studentsRef, (snapshot) => {
-//       const data = snapshot.val();
-//       if (data) {
-//         const studentList = Object.keys(data).map((key) => ({
-//           id: key,
-//           ...data[key],
-//         }));
-//         setStudents(studentList);
-//       } else {
-//         setStudents([]); // Set empty array if no data
-//       }
-//     });
-//   }, []);
-
-//   // Function to delete a student from Firebase
-//   const deleteStudent = (id) => {
-//     const studentRef = ref(db, `students/${id}`);
-//     remove(studentRef)
-//       .then(() => {
-//         alert("Student deleted successfully!");
-//       })
-//       .catch((error) => {
-//         console.error("Error deleting student:", error);
-//         alert("Failed to delete student.");
-//       });
-//   };
-
-//   return (
-//     <div>
-//       <Navbar />
-//       <Logout />
-//       <div className="student-page">
-//         <h2>Student List</h2>
-
-//         {/* Student Table */}
-//         <table className="student-table">
-//           <thead>
-//             <tr>
-//               <th>ID</th>
-//               <th>FirstName</th>
-//               <th>LastName</th>
-//               <th>Address</th>
-//               <th>DataofBirth</th>
-//               <th>Intake</th>
-//             </tr>
-//           </thead>
-//           <tbody>
-//             {students.length > 0 ? (
-//               students.map((student) => (
-//                 <tr key={student.studentId}>
-//                   <td>{student.studentId}</td>
-//                   <td>{student.firstName}</td>
-//                   <td>{student.lastName}</td>
-//                   <td>{student.address}</td>
-//                   <td>{student.dob}</td>
-//                   <td>{student.intake}</td>
-//                   <td>
-//                     <button
-//                       className="delete-btn"
-//                       onClick={() => deleteStudent(student.id)}
-//                     >
-//                       Delete
-//                     </button>
-//                   </td>
-//                 </tr>
-//               ))
-//             ) : (
-//               <tr>
-//                 <td colSpan="5">No students found.</td>
-//               </tr>
-//             )}
-//           </tbody>
-//         </table>
-//       </div>
-//     </div>
-//   );
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import React, { useState, useEffect } from "react";
 import { getDatabase, ref, onValue, remove } from "firebase/database";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Logout from "../components/Logout";
-import "./Studentpage.css";
+import "./Liststudent.css";
 import { db } from "../firebase"; 
+import Slidebar from "../components/Slidebar";
+import "./Liststudent.css";
 
 export default function StudentPage() {
   const [students, setStudents] = useState([]);
@@ -180,16 +76,20 @@ export default function StudentPage() {
   };
 
   return (
-    <div>
+    <div className="bg-liststd">
       <Navbar />
-      <div className="student-page">
-        <h2>Student List</h2>
+      <div className="container-liststd">
+        <div className="left-section-liststd"><Slidebar/></div>
+          <div className="right-section-liststd">
+              <h2 className="heading-liststd">Student List</h2>
+            <div className="liststd-page">
+        
 
         {/* Search Bars */}
-        <div className="search-container">
+        <div className="search-containerliststd">
           <input
             type="text"
-            className="search-bar"
+            className="search-barliststd"
             placeholder="Search by Student ID..."
             value={studentSearch}
             onChange={(e) => setStudentSearch(e.target.value)}
@@ -197,7 +97,7 @@ export default function StudentPage() {
 
           <input
             type="text"
-            className="search-bar"
+            className="search-barliststd"
             placeholder="Search by Intake (e.g., 39)..."
             value={intakeSearch}
             onChange={(e) => setIntakeSearch(e.target.value)}
@@ -206,10 +106,12 @@ export default function StudentPage() {
           <button className="search-btn" onClick={handleSearch}>
             Search
           </button>
-        </div>
+          </div>
+        
 
         {/* Student Table */}
-        <table className="student-table">
+        <div>
+        <table className="student-tableliststd">
           <thead>
             <tr>
               <th>ID</th>
@@ -232,15 +134,12 @@ export default function StudentPage() {
                   <td>{student.dob}</td>
                   <td>{student.intake}</td>
                   <td>
-                    <button className="edit-btn" onClick={() => handleEdit(student)}>
+                    <button className="edit-btnliststd" onClick={() => handleEdit(student)}>
                       Edit
                     </button>
                     <button
-                      className="delete-btn"
-                      onClick={() => deleteStudent(student.id)}
-                    >
-                      Delete
-                    </button>
+                      className="delete-btnliststd"
+                      onClick={() => deleteStudent(student.id)}>Delete</button>
                   </td>
                 </tr>
               ))
@@ -251,6 +150,10 @@ export default function StudentPage() {
             )}
           </tbody>
         </table>
+        </div>
+        
+      </div>
+      </div>
       </div>
     </div>
   );

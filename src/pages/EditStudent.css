@@ -1,0 +1,104 @@
+.bg-editstd{
+  background: url('../images/img1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #beb08e;
+}
+
+.container-editstd{
+    display: flex;
+}
+
+.left-section-editstd{
+    width: 400px;
+}
+
+.right-section-editstd{
+    width: 150%;
+}
+
+.heading-editstd{
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 35px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.923);
+  color: #ffffffcf;
+  text-align: center;
+}
+
+.editstd-page{
+  position: relative;
+  display: flex;
+  gap: 10px;
+  height: 81vh;
+  background: #423d31a6; /* Light yellow background */
+  background-blend-mode: darken;
+}
+
+.form-editstd {
+    position: relative;
+    width: 65%; /* Reduced width */
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+  }
+
+  .row-editstd {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; /* Added gap for better spacing */
+  }
+
+  .inputGroup-editstd {
+    font-family: 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 48%; /* Reduced width to fit better */
+  }
+
+  /* Address and Student ID take full width */
+  .inputGroupFull-editstd {
+    font-family: 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+
+  .input-editstd {
+    font-family: 'Trebuchet MS', sans-serif;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    background-color: #ddd;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  /* Submit button styling */
+.edit-button {
+    background-color: #ffbb00;
+    color: white;
+    /* padding: 10px 16px; */
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 15px;
+  }
+
+  .edit-button:hover {
+    background-color: #e79315;
+  }
