@@ -1,0 +1,201 @@
+/* General Page Styling */
+.bg-viewstd {
+    background: url("../images/img1.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-color: #beb08e;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-viewstd {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* Sidebar */
+.left-section-viewstd {
+    width: 300px;
+  }
+
+  .right-section-viewstd {
+    flex: 1;
+    padding: 20px;
+    background: #423d31a6; /* Light yellow background */
+    background-blend-mode: darken;
+  }
+
+  /* Page Content */
+.viewstd-page {
+    background: rgba(255, 255, 255, 0.342);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    background-blend-mode: darken;
+  }
+
+  /* Heading */
+.heading-viewstd {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+.hview{
+    margin-top: 15px;
+    font-style: normal;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/* Search Container */
+.search-containerviewstd {
+    font-style: normal;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+
+  .search-barviewstd {
+    font-style: normal;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    flex: 1;
+    min-width: 180px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #f7f7f7;
+    
+  }
+  
+  .search-btnviewstd {
+    position: relative;
+    left: 20px;
+    font-style: normal;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px 20px;
+    background-color: #ffbb00;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 10%;
+  }
+  
+  .search-btnviewstd:hover {
+    background-color: #e79315;
+  }
+  
+  .heading-viewstd{
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 35px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.923);
+  color: #ffffffcf;
+  }
+
+  .parapp{
+    font-style: normal;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(143, 6, 6);
+  }
+
+
+  /* Student Table */
+.viewstd-tb {
+    margin-top: 10px;
+    font-style: normal;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    /* border-style: hidden; */
+  }
+  
+  .viewstd-tb th, .viewstd-tb td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    border: 1px solid #ddd;
+    font-style: normal;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .viewstd-tb th {
+    background: #ff7f50;
+    color: white;
+  }
+  
+  .viewstd-tb tr:nth-child(even) {
+    background: #f9f9f9;
+  }
+
+  .viewstd-tbody{
+    font-style: normal;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+
+
+  /* Responsive Design */
+@media (max-width: 1024px) {
+    .container-viewstd {
+      flex-direction: column;
+    }
+    .left-section-viewstd {
+      width: 100%;
+      text-align: center;
+    }
+    .right-section-viewstd {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .search-containerviewstd {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .search-barviewstd {
+      width: 100%;
+    }
+    
+    .search-btnviewstd {
+      width: 100%;
+    }
+  
+    .viewstd-tb th, .viewstd-tb td {
+      padding: 8px;
+      font-size: 14px;
+    }
+    
+    
+  }
+  
+  @media (max-width: 480px) {
+    .viewstd-page {
+      padding: 10px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    .viewstd-tb {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  
+    
+  }

@@ -1,5 +1,4 @@
-
-.student-page {
+  .course-page {
     position: relative;
     display: flex;
     gap: 10px;
@@ -7,10 +6,9 @@
     background: #423d31a6; /* Light yellow background */
     background-blend-mode: darken;
   }
-
   
   /* Student Actions */
-  .student-actions {
+  .course-actions {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,7 +17,7 @@
     margin-top: 200px;
   }
   
-  .action-btn {
+  .action-btncourse {
     font-style: normal;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background: #e76f51;
@@ -34,24 +32,22 @@
     text-align: center;
   }
   
-  .action-btn:hover {
+  .action-btncourse:hover {
     background: #d62828;
   }
 
-  .container2 {
-    display: flex;
-  }
-  
-  .left-section {
-    width: 400px;
-  }
-  
-  .right-section {
-    width: 150%;
-  }
-  
-  .bgs{
+  .bgc{
     background: url('../images/img1.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-color: #fce7b2;
+  }
+
+  .left-section-c{
+    width: 400px;
+  }
+
+  .right-section-c{
+    width: 150%;
+  }
+  .container3 {
+    display: flex;
   }

@@ -1,0 +1,217 @@
+/* General Page Styling */
+.bg-liststd {
+  background: url("../images/img1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  background-color: #beb08e;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-liststd {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Sidebar */
+.left-section-liststd {
+  width: 300px;
+}
+
+.right-section-liststd {
+  flex: 1;
+  padding: 20px;
+  background: #423d31a6; /* Light yellow background */
+  background-blend-mode: darken;
+}
+
+/* Page Content */
+.liststd-page {
+  background: rgba(255, 255, 255, 0.342);
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  background-blend-mode: darken;
+}
+
+/* Heading */
+h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Search Container */
+.search-containerliststd {
+  font-style: normal;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-barliststd {
+  font-style: normal;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  flex: 1;
+  min-width: 180px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #f7f7f7;
+}
+
+.search-btn {
+  font-style: normal;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 10px 20px;
+  background-color: #ffbb00;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #e79315;
+}
+
+.heading-liststd{
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 35px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.923);
+  color: #ffffffcf;
+}
+/* Student Table */
+.student-tableliststd {
+  font-style: normal;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  /* border-style: hidden; */
+}
+
+.student-tableliststd th, .student-tableliststd td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  border: 1px solid #ddd;
+  font-style: normal;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.student-tableliststd th {
+  background: #ff7f50;
+  color: white;
+}
+
+.student-tableliststd tr:nth-child(even) {
+  background: #f9f9f9;
+}
+.student-tableliststd td:nth-child(7) { 
+  width:180px; /* Enough space for buttons */
+  white-space: nowrap; /* Prevents buttons from wrapping */
+}
+/* Buttons */
+.edit-btnliststd, .delete-btnliststd {
+  font-style: normal;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 4px 16px;
+  width: 40%;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-right: 8px;
+}
+
+.edit-btnliststd {
+  background-color: #3498db;
+  color: white;
+}
+
+.edit-btnliststd:hover {
+  background-color: #2980b9;
+}
+
+.delete-btnliststd {
+  background-color: #e74c3c;
+  color: white;
+  
+}
+
+.delete-btnliststd:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container-liststd {
+    flex-direction: column;
+  }
+  .left-section-liststd {
+    width: 100%;
+    text-align: center;
+  }
+  .right-section-liststd {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-containerliststd {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .search-barliststd {
+    width: 100%;
+  }
+  
+  .search-btn {
+    width: 100%;
+  }
+
+  .student-tableliststd th, .student-tableliststd td {
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  .edit-btnliststd, .delete-btnliststd {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .liststd-page {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .student-tableliststd {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .edit-btnliststd, .delete-btnliststd {
+    padding: 5px 8px;
+  }
+}
+
+
+
+

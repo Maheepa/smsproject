@@ -1,0 +1,160 @@
+/* General Page Styling */
+.bg-crse {
+  background: url("../images/img1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  background-color: #beb08e;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.courses-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Sidebar */
+.left-section-crse {
+  width: 300px;
+}
+
+.right-section-crse {
+  flex: 1;
+  padding: 20px;
+  background: #423d31a6;
+  background-blend-mode: darken;
+}
+
+/* Page Content */
+.crse-page {
+  background: rgba(255, 255, 255, 0.342);
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  background-blend-mode: darken;
+}
+
+/* Heading */
+.heading-crse {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 35px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.923);
+  color: #ffffffcf;
+  text-align: center;
+}
+
+/* Filter Section */
+.filter-section {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #f7f7f7;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+/* Course Table */
+.courses-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.ctable {
+  font-style: normal;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.ctable th, .ctable td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd; /* Added border for table lines */
+}
+
+.ctable th {
+  background: #ff7f50;
+  color: white;
+}
+
+.ctable tr:nth-child(even) {
+  background: #f9f9f9;
+}
+.ctable td:nth-child(3){
+  width: 100px;
+}
+
+/* Buttons */
+.delete-button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .courses-container {
+    flex-direction: column;
+  }
+  .left-section-crse {
+    width: 100%;
+    text-align: center;
+  }
+  .right-section-crse {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  select {
+    width: 100%;
+  }
+  
+  .ctable th, .ctable td {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .crse-page {
+    padding: 10px;
+  }
+
+  .heading-crse {
+    font-size: 20px;
+  }
+
+  .ctable {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
